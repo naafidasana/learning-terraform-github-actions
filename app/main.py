@@ -16,6 +16,11 @@ def read_root():
     return {"message": "Welcome to the FastAPI App"}
 
 
+@app.get("/home")
+def read_home():
+    return {"message": "home"}
+
+
 @app.post("/items/")
 def create_item(item: Item):
     return {"item": item, "message": "Item created succesfully"}
