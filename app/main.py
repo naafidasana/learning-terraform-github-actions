@@ -18,7 +18,7 @@ def read_root():
 
 @app.get("/home")
 def read_home():
-    return {"message": "home"}
+    return {"message": "home, coming home"}
 
 
 @app.post("/items/")
