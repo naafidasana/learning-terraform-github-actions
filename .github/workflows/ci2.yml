@@ -82,5 +82,8 @@ jobs:
         with:
           terraform_wrapper: false
 
+      - name: Terraform Init (Reinitialize)
+        run: terraform -chdir=./infra init
+
       - name: Terraform Apply
         run: terraform -chdir=./infra apply -auto-approve plan.tfplan
